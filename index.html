@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malay's Competitive Programming Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+</head>
+<body>
+    <div id="background-animation"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💻</span>
+                    <h1>Malay's CP Portfolio</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#stats" class="nav-link">Stats</a>
+                    <a href="#about" class="nav-link">About</a>
+                </nav>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2 class="hero-title">
+                            <span class="gradient-text">Competitive Programming</span>
+                            <span class="hero-subtitle">Solutions & Projects</span>
+                        </h2>
+                        <p class="hero-description">
+                            A collection of algorithmic solutions and competitive programming challenges
+                            solved across various platforms including CodeChef, showcasing problem-solving skills
+                            in Python and Java.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number" id="total-projects">22</div>
+                                <div class="stat-label">Problems Solved</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Languages</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">∞</div>
+                                <div class="stat-label">Learning</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="code-title">solution.py</div>
+                            </div>
+                            <div class="code-content">
+                                <pre><code class="language-python">def solve():
+    n = int(input())
+    result = []
+    
+    for i in range(n):
+        # Algorithm magic ✨
+        if condition_met(i):
+            result.append(process(i))
+    
+    return result
+
+print(solve())</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Project Showcase</h2>
+                    <p class="section-description">Explore my competitive programming solutions</p>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                    <button class="filter-btn" data-filter="java">Java</button>
+                    <button class="filter-btn" data-filter="easy">Easy</button>
+                    <button class="filter-btn" data-filter="medium">Medium</button>
+                    <button class="filter-btn" data-filter="hard">Hard</button>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search projects..." class="search-input">
+                    <div class="search-icon">🔍</div>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Statistics</h2>
+                    <p class="section-description">Programming journey insights</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🐍</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="python-count">15</div>
+                            <div class="stat-name">Python Solutions</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">☕</div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="java-count">8</div>
+                            <div class="stat-name">Java Solutions</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <div class="stat-value">CodeChef</div>
+                            <div class="stat-name">Primary Platform</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-info">
+                            <div class="stat-value">Algorithms</div>
+                            <div class="stat-name">Focus Area</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Malay's Competitive Programming Portfolio. Built with passion for algorithms.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">GitHub</a>
+                    <a href="#" class="footer-link">CodeChef</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <div class="modal-meta">
+                        <span class="modal-language" id="modal-language"></span>
+                        <span class="modal-difficulty" id="modal-difficulty"></span>
+                    </div>
+                    <p class="modal-description" id="modal-description"></p>
+                </div>
+                <div class="modal-code">
+                    <div class="code-header">
+                        <span class="code-filename" id="modal-filename"></span>
+                        <button class="copy-btn" id="copy-btn">Copy Code</button>
+                    </div>
+                    <pre><code id="modal-code-content" class="language-python"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
